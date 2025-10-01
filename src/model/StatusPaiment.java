@@ -25,10 +25,11 @@ public enum StatusPaiment {
 
     public static StatusPaiment fromString(String text) {
         for (StatusPaiment s : StatusPaiment.values()) {
-            if (s.name().equalsIgnoreCase(text)) {
+            if (s.name().equalsIgnoreCase(text) || s.getLibelle().equalsIgnoreCase(text)) {
                 return s;
             }
         }
         return null;
     }
+
 }
